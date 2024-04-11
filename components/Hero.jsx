@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
@@ -18,18 +20,44 @@ const Hero = () => {
             </div>
             <div className="flex flex-col pt-10">
                 <p  style={{ color:"#CACACA", fontSize:"12px", fontStyle:"italic", fontWeight:"bold"}} className="pt-8">
-                    Promptopia is an open-source AI prompting tools 
+                Welcome, fellow code wizard!
                 </p>
-                <h1 className="text-4xl sm:text-5xl font-extrabold ">
-                A occurence / object / sight that is <span style={{ color: '#FEB103' }}>both</span> 
+                {/* <h1 className="text-4xl sm:text-5xl font-extrabold ">
+                Unleashing bytes of creativity  <span style={{ color: '#FEB103' }}>and</span> 
                 <br className="max-md:hidden" />
-                a phenomenon and an anomaly.
-                    
+                crafting digital magic
+
+
+                </h1> */}
                 
-                    
-                </h1>
-                <p  style={{ color:"#CACACA", fontSize:"15px", fontStyle:"italic", fontWeight:"bold"}} className="pt-8">
+
+
+                <TypeAnimation
+                    sequence={[
+                        // Same substring at the start will only be typed out once, initially
+                        "<span style={{ color: '#FEB103' }}>Welcome to the Coding Dimension!</span>",
+                        6000,
+                        'Where we turn caffeine into code and dreams into web apps!',
+                        6000
+                    ]}
+                    className='text-4xl  sm:text-5xl font-extrabold'
+                    wrapper='h1'
+
+                    speed={5}
+                    deletionSpeed={5}
+                    style={{ display: 'inline-block' }}
+                    repeat={Infinity}
+                />
+            
+                
+
+
+
+                {/* <p  style={{ color:"#CACACA", fontSize:"15px", fontStyle:"italic", fontWeight:"bold"}} className="pt-8">
                     Promptopia is an open-source AI prompting tools for modern world to discover
+                </p> */}
+                <p  style={{ color:"#CACACA", fontSize:"15px", fontStyle:"italic", fontWeight:"bold"}} className="pt-8">
+                Unleashing bytes of creativity and crafting digital magic.
                 </p>
                 <p className="" style={{fontSize:"15px", fontWeight:"bold"}}>
                     #create and share creative prompts

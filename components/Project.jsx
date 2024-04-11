@@ -50,6 +50,7 @@ const Project = () => {
                 <ProjectCard key={index} image={project.image} 
                 name={project.name} description={project.description}
                  github={project.github}
+                 
                  link={project.link}/>
             ))}
         </div>
