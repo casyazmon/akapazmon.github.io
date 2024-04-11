@@ -53,7 +53,7 @@ const Feed = () => {
 
       <div className="flex-item flex-1 flexItem p-16 flexItem">
         
-        <img src="/assets/images/localman.png" alt="Your Image" className="max-w-full max-h-full object-contain" />
+        <img src="/assets/images/kasina.png" alt="Your Image" className="max-w-full max-h-full object-contain" />
         {/* <Image
             src="/assets/images/plate.jpg"
             width={150}

@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
-    <section className="w-full shadow-md flex flex-col pt-16 pb-6 bg-white px-7  gap-20">
+    <section className="w-full shadow-md flex flex-col pt-4 sm:pt-16 pb-20 bg-white px-7 sm:gap-20">
         <div className="flex  gap-16 ">
             <div className="sm:flex hidden align-middle">
                 <Image
@@ -34,9 +34,7 @@ const Hero = () => {
 
                 <TypeAnimation
                     sequence={[
-                        // Same substring at the start will only be typed out once, initially
-                        "<span style={{ color: '#FEB103' }}>Welcome to the Coding Dimension!</span>",
-                        6000,
+                        
                         'Where we turn caffeine into code and dreams into web apps!',
                         6000
                     ]}
@@ -46,7 +44,7 @@ const Hero = () => {
                     speed={5}
                     deletionSpeed={5}
                     style={{ display: 'inline-block' }}
-                    repeat={Infinity}
+                    repeat={false}
                 />
             
                 
@@ -77,12 +75,12 @@ const Hero = () => {
         
         </div>
 
-        <div className="flex justify-end">
-            <div className="flex flex-col items-end gap-4">
+        <div className="flex justify-end relative  pt-14">
+            <div className="flex flex-col items-end gap-4 absolute bottom-0">
                
-                <FaGithub  size={15}/>
-                <FaLinkedin size={15}/>
-                <FaTwitter size={15}/>
+                <FaGithub  size={20}/>
+                <FaLinkedin size={20}/>
+                <FaTwitter size={20}/>
             </div>
 
         </div>
