@@ -6,18 +6,24 @@ import {useState, useEffect} from 'react'
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
 
 const Nav = () => {
+
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
     const isUserLoggedIn = true;
     const [providers, setProviders] = useState(null);
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
-    useEffect(() => {
-        const setProviders = async () => {
-            const response = await getProviders();
-            setProviders(response)
-        }
-        setProviders();
-    },[])
+    // useEffect(() => {
+    //     const setProviders = async () => {
+    //         const response = await getProviders();
+    //         setProviders(response)
+    //     }
+    //     setProviders();
+    // },[])
 
+    const handleDarkModeChange = () => {
+        setIsDarkMode(!isDarkMode)
+    }
 
   return (
     <nav className="flex-between w-full   bg-white  shadow-md p-5">
@@ -36,21 +42,41 @@ const Nav = () => {
         </Link>
 
         <div className="flex gap-4 flex-center">
-            <Link href="/create-prompt" className='logo_text'>
+            <Link href="#about" className='logo_text'>
                 About
             </Link>
-            <Link href="/create-prompt" className='logo_text'>
-                Blog
+            <Link href="#skills" className='logo_text'>
+                Skills
             </Link>
-            <Link href="/create-prompt" className='logo_text'>
+            <Link href="#experiences" className='logo_text'>
+                Experiences
+            </Link>
+            <Link href="#projects" className='logo_text'>
+                Projects
+            </Link>
+            <Link href="#contact" className='logo_text'>
                 Contact
             </Link>
+            
+
 
         </div>
 
         {/* Desktop Navigation: make hiddent in small devices */}
-        <div className="sm:flex hidden">
-            {isUserLoggedIn ? (
+        <div className="sm:flex hidden sm:px-10">
+            <label className='flex cursor-pointer select-none items-center'>
+                <div className='relative'>
+                    <input
+                    type='checkbox'
+                    checked={isDarkMode}
+                    onChange={handleDarkModeChange}
+                    className='sr-only'
+                    />
+                    <div className='block h-8 w-14 rounded-full bg-amber-400'></div>
+                    <div className={`dot absolute left-1 top-1 h-6 w-6 rounded-full ${isDarkMode? 'bg-white': 'bg-[#232B2B]'} transition ${isDarkMode ? 'translate-x-6' : ''}`}></div>
+                </div>
+            </label>
+            {/* {isUserLoggedIn ? (
                 <div className='flex gap-3 md:gap-5'>
                     <Link href="/create-prompt" className='black_btn'>
                         Create Post
@@ -74,87 +100,83 @@ const Nav = () => {
                 </div>
             ): (
                 <>
-                {providers &&  Object.values(providers)
-                .map((provider) => (
-                    <button
-                    type='button'
-                    key={provider.name}
-                    onClick={() => signIn(provider.id)}
-                    className='black_btn'>
-                        Sign In
-                    </button>
-                ))}
+                
                 </>
-            )}
+            )} */}
 
         </div>
 
         
         {/*Mobile Navigation */}
-        <div className="sm:hidden flex relative">
-            {isUserLoggedIn? (
-                <div className="flex">
-                    <Image
-                            src="/assets/icons/menu.svg"
-                            width={37}
-                            height={37}
-                            className='rounded-full'
-                            alt='profile'
-                            onClick={() => setToggleDropdown((prev) => !prev)}
-                        
-                        />
+        <div className="sm:hidden flex relative ">
+            <div className="flex">
+                <Image
+                        src="/assets/icons/menu.svg"
+                        width={37}
+                        height={37}
+                        className='rounded-full'
+                        alt='profile'
+                        onClick={() => setToggleDropdown((prev) => !prev)}
+                    
+                    />
+                    
 
-                        {toggleDropdown && (
-                            <div className="dropdown">
-                                <Link
-                                    href="/profile"
-                                    className='dropdown_link'
-                                    onClick={() => setToggleDropdown(false)}
-                                >
-                                    My Profile
-                                </Link>
+                    {toggleDropdown && (
+                        <div className="dropdown">
+                            <Link
+                                href="/#about"
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown(false)}
+                            >
+                                About
+                            </Link>
 
-                                <Link
-                                    href="/create-prompt"
-                                    className='dropdown_link'
-                                    onClick={() => setToggleDropdown(false)}
-                                >
-                                    Create Prompt
-                                </Link>
+                            <Link
+                                href="#skills"
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown(false)}
+                            >
+                                Skills
+                            </Link>
 
-                                <button
+                            <Link
+                                href="#experiences"
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown(false)}
+                            >
+                                Experiences
+                            </Link>
+
+                            <Link
+                                href="#projects"
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown(false)}
+                            >
+                                Projects
+                            </Link>
+
+                            <Link
+                                href="#contact"
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown(false)}
+                            >
+                                Contact
+                            </Link>
+
+                            {/* <button
                                 type='button'
                                 onClick={() => {
                                     setToggleDropdown(false);
                                     signOut()
                                 }}
                                 className='mt-5 w-full black_btn'>
-                                    Sign Out
-                                </button>
+                                Experiencs
+                            </button> */}
 
+                        </div>
+                    )}
 
-                            </div>
-                        )}
-
-                </div>
-            ): (
-                <>
-                {providers &&  Object.values(providers)
-                .map((provider) => (
-                    <button
-                    type='button'
-                    key={provider.name}
-                    onClick={() => signIn(provider.id)}
-                    className='black_btn'>
-                        <Link href="/register">
-                        Sign In
-                        </Link>
-                        
-                    </button>
-                ))}
-                </>
-
-            )}
+            </div>
         </div>
     </nav>
   )

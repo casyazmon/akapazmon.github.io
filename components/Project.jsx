@@ -9,21 +9,21 @@ const Project = () => {
         { 
             image: '/assets/images/project2.jpg',
             name: 'Online Quiz App (Wizz)', 
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatibus officia temporibus non, voluptatem voluptates.',
+            description: 'The application allows users to take quizzes on various topics. Users can browse available quizzes, answer questions, and receive feedback on their results.',
             github:'github',
             link:'website'
         },
         { 
             image: '/assets/images/project3.jpg',
             name: 'Make it Short (URL)', 
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatibus officia temporibus non, voluptatem voluptates.',
+            description: 'MakeItShort is a simple URL shortener API built with Java Spring Boot and MongoDB. It allows users to shorten long URLs into concise and easily shareable links.',
             github:'github',
             link:'website'
         },
         { 
             image: '/assets/images/project2.jpg',
-            name: 'Market in One (Online Store)', 
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatibus officia temporibus non, voluptatem voluptates.',
+            name: 'BargainFinder (Online Store)', 
+            description: 'BargainFinder is a mobile application designed to help users find the best deals on various products available online. By crawling the web and aggregating data from multiple e-commerce platforms, BargainFinder identifies products with the cheapest prices and presents them to users in an easy-to-navigate interface.',
             github:'github',
             link:'website'
         }
@@ -31,7 +31,7 @@ const Project = () => {
 
 
   return (
-    <section style={{backgroundColor:"#FEB101"}} className=" w-full flex flex-col mt-24 sm:mt-44 shadow-lg   p-5">
+    <section id='projects' style={{backgroundColor:"#FEB101"}} className=" w-full flex flex-col mt-24 sm:mt-44 shadow-lg   p-5">
     <div className="flex-col flex bg-white  pt-5 pb-24">
         <Subnav/>
 

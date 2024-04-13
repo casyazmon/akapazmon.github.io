@@ -1,9 +1,10 @@
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Feed = () => {
   return (
-    <section className=" w-full  flex flex-col-reverse  sm:flex-row mt-14  sm:mt-44 shadow-md ">
+    <section id='about' className=" w-full  flex flex-col-reverse  sm:flex-row mt-14  sm:pt-36 shadow-md ">
         
       <div className=" flex flex-item flex-1 py-16 px-7 gap-20 bg-white">
         <div className="hidden sm:flex">
@@ -24,15 +25,14 @@ const Feed = () => {
               
           </h1>
           <p className="desc">
-              Dev Design
+              My story
           </p>
           <p className="desc-sub leading-relaxed">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo officia iste tenetur, 
-              quae ratione ipsa expedita, aperiam, ex corrupti nihil harum maiores sit fuga. 
-              Quasi ullam fuga rem officiis unde.
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo officia iste tenetur, 
-              quae ratione ipsa expedita, aperiam, ex corrupti nihil harum maiores sit fuga. 
-              Quasi ullam fuga rem officiis unde.
+          Results-oriented professional committed to building a successful career in software development. 
+          Ability to develop custom software applications and update existing programs to refine components
+          like data storage capacities and cybersecurity. Effective interpersonal skills: work well as part 
+          of a team with people at all organizational levels and diverse backgrounds. Equally successful working 
+          independently on time-sensitive projects and tasks.
           </p>
 
           <div className="flex-col pt-4">
@@ -51,9 +51,22 @@ const Feed = () => {
         
       </div>
 
-      <div className="flex-item flex-1 flexItem p-16 flexItem">
+      <div className="flex-item flex-1 flexItem">
+      <div className="flex gap-4 flex-end">
+            <button
+            type='button'
+            className='shadow-sm bg-white text-[#FEB101] text-sm rounded-full px-4 py-2 m-8 font-semibold'>
+                <Link href="/register">
+                Download resume
+                </Link>
+                
+            </button>
+
+        </div>
         
-        <img src="/assets/images/kasina.png" alt="Your Image" className="max-w-full max-h-full object-contain" />
+       <div className="flex px-16">
+       <img src="/assets/images/kasina.png" alt="Your Image" className="max-w-full max-h-full object-contain" />
+       </div>
         {/* <Image
             src="/assets/images/plate.jpg"
             width={150}

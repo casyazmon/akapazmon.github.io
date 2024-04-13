@@ -12,10 +12,11 @@ const Home = () => {
       <Hero/>
       
       <Feed/>
-      <Skills/>
+      
       <Experience/>
       
       <Project/>
+      <Skills/>
       
       <Contact/>
       

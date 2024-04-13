@@ -5,19 +5,16 @@ import Subnav from './Subnav'
 
 const skills = () => {
 
-  const data = [
-    { skill: 'Android developer', description: 'Java, Kotlin' },
-    { skill: 'UX designer', description: 'Figma, Photoshop' },
-    { skill: 'iOS developer', description: 'Swift' },
-    { skill: 'Android developer', description: 'Java, Kotlin' },
-    { skill: 'UX designer', description: 'Figma, Photoshop' },
-    { skill: 'iOS developer', description: 'Swift' },
-    { skill: 'UX designer', description: 'Figma, Photoshop' },
-    { skill: 'iOS developer', description: 'Swift' }
-  ];
+  const skills = [
+    { name: 'Programming Languages', description: ['Java', 'JavaScript', 'PHP', 'HTML', 'Sass', 'GraphQL']},
+    { name: 'Libraries & Frameworks', description: ['Springboot', 'React', 'Next.js', 'Gatsby', 'Node.js', 'React Native' ]},
+    { name: 'Tools and Platforms', description: ['Git/GitHub', 'Heroku', 'WordPress', 'Firebase', 'Docker', 'Webpack' ]}
+  ]
+
+
 
   return (
-    <section style={{backgroundColor:"#FEB101"}} className=" w-full flex flex-col  mt-24 sm:mt-44 shadow-lg  p-5">
+    <section id='skills' style={{backgroundColor:"#FEB101"}} className=" hidden  w-full sm:flex flex-col  mt-24 sm:mt-44 shadow-lg  p-5">
       <div className="flex-col flex bg-white  pt-5">
         <Subnav/>
 
@@ -52,9 +49,9 @@ const skills = () => {
             />
             </div>
           
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-full justify-center  ">
-              {data.map((skills, index) => (
-                <SkillCard key={index} skill={skills.skill} description={skills.description}/>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 max-w-full justify-center  ">
+              {skills.map((skill, index) => (
+                <SkillCard key={index} skill={skill.name} description={skill.description}/>
               ))}
           </div>
           
