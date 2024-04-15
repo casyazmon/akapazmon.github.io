@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="w-full shadow-md flex flex-col pt-10 sm:pt-16 pb-20 bg-white px-7 sm:gap-20">
+    <section className="w-full shadow-md flex flex-col border-t-2 border-amber-600 sm:border-none sm:pt-16 pb-20 bg-white px-7 sm:gap-20">
         <div className="flex  gap-16 ">
             <div className="sm:flex hidden align-middle">
                 <Image
@@ -71,8 +71,6 @@ const Hero = () => {
             </div>
 
             </div>
-
-
         
         </div>
 

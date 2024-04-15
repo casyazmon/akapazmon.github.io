@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,7 +84,7 @@ body {
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto   sm:mt-24 ;
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto font-inter   sm:mt-24 ;
 }
 
 .app1 {
@@ -103,7 +104,7 @@ body {
 }
 
 .head_text {
-  @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-4xl;
+  @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-4xl font-inter;
 }
 
 .orange_gradient {
@@ -119,11 +120,11 @@ body {
 }
 
 .desc {
-  @apply mt-5 text-base text-gray-600 font-bold sm:text-xl max-w-2xl;
+  @apply mt-5 text-base text-gray-600 font-bold sm:text-xl max-w-2xl font-inter;
 }
 
 .sub-title {
-  @apply mt-5  font-bold  text-2xl;
+  @apply mt-5  font-bold  text-2xl font-inter;
 }
 
 .desc-head {
@@ -164,7 +165,7 @@ body {
 
 /* Nav Component */
 .logo_text {
-  @apply max-sm:hidden font-satoshi font-semibold text-sm text-black tracking-wide;
+  @apply max-sm:hidden font-inter font-semibold text-sm text-black tracking-wide;
 }
 
 .dropdown {

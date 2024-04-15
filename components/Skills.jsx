@@ -8,7 +8,7 @@ const skills = () => {
   const skills = [
     { name: 'Programming Languages', description: ['Java', 'JavaScript', 'PHP', 'HTML', 'Sass', 'GraphQL']},
     { name: 'Libraries & Frameworks', description: ['Springboot', 'React', 'Next.js', 'Gatsby', 'Node.js', 'React Native' ]},
-    { name: 'Tools and Platforms', description: ['Git/GitHub', 'Heroku', 'WordPress', 'Firebase', 'Docker', 'Webpack' ]}
+    { name: 'Tools and Platforms', description: ['AWS','Heroku', 'WordPress', 'Firebase', 'Docker', 'Webpack' ]}
   ]
 
 

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Experience = () => {
   return (
@@ -6,8 +7,25 @@ const Experience = () => {
       <div className=" text-center pb-16">
         <h2 className="head_text">Experiences</h2>
       </div>
+      <div className="flex justify-center items-center">
+      <ul className="sm:flex-col pl-12 hidden">
+        <li className="w-5 border-t-2 border-gray-400 my-4">
+            <Link href='#' id='about'></Link>
+          </li>
+          <li className="w-10 border-t-4 border-amber-400 my-4">
+          </li>
+          
+          <li className="w-5 border-t-2 border-gray-400 my-4">
+            <Link href='#' id='about'></Link>
+          </li>
+          <li className="w-5 border-t-2 border-gray-400 my-4">
+            <Link href='#' id='about'></Link>
+          </li>
 
-      <div className="flex-col">
+        </ul>
+      <div className="flex-col justify-center items-center">
+      
+      
 
       <div className=" flex  flex-1 py-10 sm:py-6 px-7  space-x-4 sm:space-x-9 justify-center">
         <div className="sm:flex sm:w-32 ">
@@ -27,11 +45,6 @@ const Experience = () => {
           </div>
         </div>
 
-       
-      
-        
-
-        
 
         <div className="flex flex-col  sm:w-1/2">
           <h1 className="font-extrabold text-2xl text-black ">
@@ -174,6 +187,9 @@ const Experience = () => {
         
       </div>
       </div>
+      </div>
+
+      
     
 
      
