@@ -80,8 +80,8 @@ const About = ({children, id}) => {
 
         </div>
         
-       <div className="flex px-16">
-       <img src="/assets/images/kasina.png" alt="Your Image" className="max-w-full max-h-full object-contain" />
+       <div className="flex p-6 sm:p-10">
+       <img src="/assets/images/kasina.png" alt="Your Image" className="max-w-full max-h-full rounded-full" />
        </div>
         {/* <Image
             src="/assets/images/plate.jpg"
