@@ -7,18 +7,24 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="w-full shadow-md flex flex-col border-t-2 border-amber-600 sm:border-none sm:pt-16 pb-20 bg-white px-7 sm:gap-20">
-        <div className="flex  gap-16 ">
-            <div className="sm:flex hidden align-middle">
-                <Image
-                    src="/assets/icons/side-menu.png"
-                    width={70}
-                    height={70}
-                    className='max-w-full max-h-full object-contain'
-                    alt='profile'
-                
-                />
-            </div>
+    <section className="w-full shadow-md flex flex-col  border-t-2 border-amber-600 sm:border-none sm:pt-16 pb-20 bg-white px-7 sm:gap-20">
+        <div className="flex  gap-16  items-center justify-center">
+        <div className="sm:flex hidden">
+          <ul className=" flex-col">
+            <li className="w-10 border-t-4 border-amber-400 my-4">
+            </li>
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+
+          </ul>
+        </div>
             <div className="flex flex-col pt-10 sm:max-w-5xl">
                 <p  style={{ color:"#FEB101", fontSize:"12px", fontStyle:"italic", fontWeight:"bold"}} className="py-8">
                 Welcome, fellow code wizard!
@@ -77,9 +83,9 @@ const Hero = () => {
         <div className="flex justify-end relative  pt-14 sm:px-10 ">
             <div className="flex flex-col items-end gap-4 absolute bottom-0">
                
-                <FaGithub  size={20}/>
-                <FaLinkedin size={20}/>
-                <FaTwitter size={20}/>
+                <FaGithub  size={20} color='#1f1f1f'/>
+                <FaLinkedin size={20} color='#1f1f1f'/>
+                <FaTwitter size={20} color='#1f1f1f'/>
             </div>
 
         </div>

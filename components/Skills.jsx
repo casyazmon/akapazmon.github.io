@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Nav from './Nav'
 import SkillCard from './SkillCard'
 import Subnav from './Subnav'
+import Link from 'next/link'
 
 const skills = () => {
 
@@ -40,13 +41,24 @@ const skills = () => {
         <div className="flex  gap-10 px-10 text-center   justify-center py-10 mb-20  ">
 
           <div className="hidden sm:flex">
-            <Image
-                src="/assets/icons/side-menu.png"
-                width={50}
-                height={50}
-                className='max-w-full max-h-full object-contain'
-                alt='profile'
-            />
+          <div className="sm:flex hidden">
+          <ul className=" flex-col">
+            
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+            
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+            <li className="w-10 border-t-4 border-amber-400 my-4">
+            </li>
+            <li className="w-5 border-t-2 border-gray-400 my-4">
+              <Link href='#' id='about'></Link>
+            </li>
+
+          </ul>
+        </div>
             </div>
           
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 max-w-full justify-center  ">

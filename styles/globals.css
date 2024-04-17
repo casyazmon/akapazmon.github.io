@@ -84,7 +84,7 @@ body {
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto font-inter   sm:mt-24 ;
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto font-satoshi  sm:mt-24 ;
 }
 
 .app1 {

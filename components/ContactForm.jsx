@@ -31,7 +31,7 @@ const ContactForm = () => {
     
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-5xl mx-auto   pt-6 pb-8 ">
+    <form onSubmit={handleSubmit} className="max-w-5xl mx-auto px-12  pt-6 pb-8 ">
       <div className=" flex flex-col">
         <label htmlFor="name" className="block text-gray-700 text-sm mb-2">FULL NAME:</label>
         <input
@@ -41,7 +41,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className='border-b-2 border-black w-96'
+          className='border-b-2 border-black '
         />
       </div>
       <div className=" flex flex-col">
