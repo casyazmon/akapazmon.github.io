@@ -14,8 +14,6 @@ const About = ({children, id}) => {
       <div className=" flex justify-center items-center flex-1 py-16 px-7 gap-20 bg-white">
         
 
-        
-
         <div className="sm:flex hidden">
           <ul className=" flex-col">
             

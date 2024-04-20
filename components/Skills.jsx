@@ -12,8 +12,6 @@ const skills = () => {
     { name: 'Tools and Platforms', description: ['AWS','Heroku', 'WordPress', 'Firebase', 'Docker', 'Webpack' ]}
   ]
 
-
-
   return (
     <section id='skills' style={{backgroundColor:"#FEB101"}} className=" hidden  w-full sm:flex flex-col  mt-24 sm:mt-44 shadow-lg  p-5">
       <div className="flex-col flex bg-white  pt-5">
@@ -27,16 +25,6 @@ const skills = () => {
                 I will like <span style={{ color: '#FEB103' }}>YOU</span> to hire me.
             </h3>
         </div>
-
-
-  {/* <Image
-      src="/assets/icons/side-menu.png"
-      width={50}
-      height={50}
-      className='max-w-full max-h-full object-contain'
-      alt='profile'
-  /> */}
-          
     
         <div className="flex  gap-10 px-10 text-center   justify-center py-10 mb-20  ">
 

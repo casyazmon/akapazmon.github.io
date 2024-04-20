@@ -45,8 +45,8 @@ const Project = () => {
     <div className="flex-col flex bg-white  pt-5 pb-24">
         <Subnav/>
 
-        <div className="flex flex-col justify-center items-center pt-20">
-            <h1 className="head_text ">
+        <div className=" flex-col justify-center items-center pt-20">
+            <h1 className="head_text text-center ">
                 Some relevant <span style={{ color: '#FEB103' }}>projects</span>. 
             </h1>
             <h3 className=' w-full py-3 text-center desc-sub'>
